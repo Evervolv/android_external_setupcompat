@@ -1012,9 +1012,9 @@ public class PartnerConfigHelper {
           return shouldApplyExtendedPartnerConfig(context);
         }
       } catch (IllegalArgumentException | SecurityException exception) {
-        Log.w(TAG, "SetupWizard Material You configs supporting status unknown; return as false.");
+        Log.w(TAG, "SetupWizard Material You configs supporting status unknown; return as true.");
         applyMaterialYouConfigBundle = null;
-        return false;
+        return true;
       }
     }
 
@@ -1040,9 +1040,9 @@ public class PartnerConfigHelper {
                     /* arg= */ null,
                     /* extras= */ null);
       } catch (IllegalArgumentException | SecurityException exception) {
-        Log.w(TAG, "SetupWizard default theme status unknown; return as null.");
+        Log.w(TAG, "SetupWizard default theme status unknown; return as glif_v4.");
         suwDefaultThemeBundle = null;
-        return null;
+        return "glif_v4";
       }
     }
     if (suwDefaultThemeBundle == null || suwDefaultThemeBundle.isEmpty()) {
@@ -1087,9 +1087,9 @@ public class PartnerConfigHelper {
                     /* arg= */ null,
                     /* extras= */ null);
       } catch (IllegalArgumentException | SecurityException exception) {
-        Log.w(TAG, "SetupWizard full dynamic color supporting status unknown; return as false.");
+        Log.w(TAG, "SetupWizard full dynamic color supporting status unknown; return as true.");
         applyFullDynamicColorBundle = null;
-        return false;
+        return true;
       }
     }
 
@@ -1112,9 +1112,9 @@ public class PartnerConfigHelper {
       } catch (IllegalArgumentException | SecurityException exception) {
         Log.w(
             TAG,
-            "SetupWizard one-pane support in embedded activity status unknown; return as false.");
+            "SetupWizard one-pane support in embedded activity status unknown; return as true.");
         applyEmbeddedActivityOnePaneBundle = null;
-        return false;
+        return true;
       }
     }
 
@@ -1136,9 +1136,9 @@ public class PartnerConfigHelper {
                     /* arg= */ null,
                     /* extras= */ null);
       } catch (IllegalArgumentException | SecurityException exception) {
-        Log.w(TAG, "Neutral button style supporting status unknown; return as false.");
+        Log.w(TAG, "Neutral button style supporting status unknown; return as true.");
         applyNeutralButtonStyleBundle = null;
-        return false;
+        return true;
       }
     }
 
@@ -1159,9 +1159,9 @@ public class PartnerConfigHelper {
                     /* arg= */ null,
                     /* extras= */ null);
       } catch (IllegalArgumentException | SecurityException exception) {
-        Log.w(TAG, "Font weight supporting status unknown; return as false.");
+        Log.w(TAG, "Font weight supporting status unknown; return as true.");
         applyFontWeightBundle = null;
-        return false;
+        return true;
       }
     }
 
